@@ -1,0 +1,55 @@
+/** {
+    cursor: cell;
+ }*/
+
+ body {
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    background-color: black;
+    overflow: hidden;
+    background-image: url("mirror2.png"), url("mandala200p.gif");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+  }  
+
+.logo {
+    position: absolute;
+}
+
+.wrapper {
+    height: 480px;
+    width: 650px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: black;
+}
+
+.button {
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.grid-item {
+    text-align: center;
+    margin: auto;
+}
+
+.text {
+    position: relative;
+    padding: 5px;
+    font-size: 28px;
+    z-index: 1000;
+    color: whitesmoke;
+}

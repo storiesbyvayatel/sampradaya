@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SAMPRADAYA</title>
+        <link rel="shortcut icon" href="favico128p.ico" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <script src="scramble.js"></script>
+        <link href="styles.css" rel="stylesheet"/>
+    </head>
+  <body>
+      <div class="wrapper">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>  
+        <div class="grid-item"></div>
+        <div class="grid-item">
+          <div class="text">hello</div>
+          <script>
+            const phrases = [
+              'drink the UNTAINTED WATER,',
+              'thrive under the FOSTERING LIMB,',
+              'through the ABSOLVING DARKNESS,',
+              'you\'re FORGIVEN,',
+              'and may death',
+              'grant you the EVERLASTING EXISTENCE,',
+              'as one.'
+            ]
+
+            const el = document.querySelector('.text')
+            const fx = new TextScramble(el)
+
+            let counter = 0
+            const next = () => {
+              fx.setText(phrases[counter]).then(() => {
+                setTimeout(next, 2000)
+              })
+              counter = (counter + 1) % phrases.length
+            }
+
+            next()
+          </script>
+          <button class="button" id="button1">I want to be forgiven</button>
+        </div>
+        <div class="grid-item"></div>  
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div> 
+      </div>
+  </body>
+</html>
